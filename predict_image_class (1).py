@@ -25,7 +25,7 @@ def main():
 
     
  def prdict_class(image):
-  classifier_model=tf.keras.models.load_model(r"/content/gdrive/MyDrive/intel_image_classification_data/my_model.hdf5"),
+  classifier_model=tf.keras.models.load_model(r"./my_model.hdf5"),
   shape=((128,128,3))
   model=tf.keras.Sequential(hub[hub.KerasLayer(classifier_model, input_shape=shape)])
   test_image=image.resize((128,128))
